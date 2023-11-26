@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birthday Wish</title>
+    <style>
+        body {
+            background-color: rgb(135, 235, 173);
+            text-align:center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: #e4e2d6;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #4b99ff;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .image {
+            margin: 0 auto;
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff4b4b;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #33ff8f;
+        }
+
+        .celebration {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background-image: url('hey.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 9999;
+            animation: celebrationEffect 5s infinite;
+        }
+
+        @keyframes celebrationEffect {
+            0% {
+                background-position: center;
+            }
+            50% {
+                background-position: top;
+            }
+            100% {
+                background-position: bottom;
+            }
+        }
+
+        /* Collage Grid */
+        .collage {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 10px;
+            margin-bottom: 20px;
+            justify-items: center;
+        }
+
+        .collage img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+            animation: imageAnimation 10s infinite;
+        }
+
+        .collage img:nth-child(even) {
+            justify-self: start;
+        }
+
+        .collage img:nth-child(odd) {
+            justify-self: end;
+        }
+
+        .birthdayMessage {
+            display: none;
+            text-align: justify;
+            line-height: 1.5;
+        }
+
+        .birthdayMessage p {
+            margin: 10px 0;
+        }
+        @keyframes imageAnimation {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday,Mawa❤</h1>
+
+        <div class="collage">
+        
+        <img src="leo (1).jpg" atl="Friend 1">
+        <img src="leo (2).jpg" atl="Friend 2">
+        <img src="leo (4).jpg" atl="Friend 3">
+        <img src="leo (3).jpg" atl="Friend 4">
+        <img src="leo (5).jpg" atl="Friend 5">
+        <img src="leo (6).jpg" atl="Friend 6">
+        <img src="leo (11).jpg" atl="Friend 7">
+        <img src="leo (8).jpg" atl="Friend 8">
+        <img src="leo (12).jpg" atl="Friend 9">
+        <img src="leo (10).jpg" atl="Friend 10">
+        
+
+        </div>
+        <button class="button" onclick="startCelebration()">Click Chey Ra Howley</button>
+        <div id="birthdayMessage" class="birthdayMessage">
+           <p style="font-family: 'Arial Narrow Bold', sans-serif; font-style:normal; font-weight: 500;"> Happy Birthday ra  Mawa❤!</p>
+           <p> 🎉🎂 May your day be as extraordinary as you are, filled with joy, laughter, and all the wonderful surprises life has to offer.</p>
+            <p>Here's to another year of incredible moments and unforgettable adventures. </p> 
+           <p>  Cheers to the uniqueness that makes you shine so bright! 🥳🎈"</p>
+
+
+            <p>Happy Ga Undu MAWA.....♥</p>  
+
+
+
+
+
+
+        </div>
+    </div>
+   
+            
+
+
+    <div id="celebrationEffect" class="celebration"></div>
+
+    <script>
+        function startCelebration() {
+            document.getElementById('birthdayMessage').style.display = 'block';
+            document.getElementById('celebrationEffect').style.display = 'block';
+            window.scrollBy(0,500);
+            scrolldelay = setTimeout(pageScroll,10);
+        }
+    </script>
+</body>
+</html>
